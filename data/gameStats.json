@@ -3,6 +3,7 @@
     "gamesPlayed": 2,
     "gamesSolved": 2,
     "totalScore": 190,
+    "perfectPuzzles": 1,
     "history": [
       {
         "gameType": "connections",
