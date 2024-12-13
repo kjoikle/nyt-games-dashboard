@@ -120,7 +120,7 @@ const parseStrandsGame = (input: string[]) => {
     date: strandsDate.toDateString(),
     puzzleNumber: puzzleNumber,
     score: score,
-    gameBoard: gameBoard,
+    grid: gameBoard,
     hintsUsed: hintsUsed,
     indexOfSpangram: indexOfSpangram, // zero indexed
   };

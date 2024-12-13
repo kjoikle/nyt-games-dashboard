@@ -7,7 +7,7 @@ import ConnectionsGameCard from "@/components/ConnectionsGameCard";
 
 const ConnectionsDashboard = () => {
   const connectionsStats: connectionsData = gameStats.connections;
-  const avgScore = averageScore(connectionsStats);
+  const avgScore = averageScore(connectionsStats); // whoops, this is avg score not win rate
 
   // something very wrong with display in smaller sizes
   return (

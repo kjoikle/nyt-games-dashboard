@@ -20,7 +20,7 @@ export interface strandsGame {
   date: string;
   puzzleNumber: number;
   score: number;
-  gameBoard: string[];
+  grid: string[];
   hintsUsed: number;
   indexOfSpangram: number; // zero indexed
 }
@@ -35,7 +35,8 @@ export interface connectionsData {
 
 export interface strandsData {
   gamesPlayed: number;
-  gamesSolved: number;
   totalScore: number;
+  totalHints: number;
+  perfectPuzzles: number;
   history: strandsGame[];
 }

@@ -8,3 +8,7 @@ export function averageScore(data: connectionsData | strandsData) {
       : 0;
   return avgScore;
 }
+
+export function calculateRate(is: number, of: number) {
+  return of > 0 ? Math.round((is / of) * 100) : 0;
+}

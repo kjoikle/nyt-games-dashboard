@@ -40,6 +40,8 @@
   "strands": {
     "gamesPlayed": 3,
     "totalHints": 0,
+    "perfectPuzzles": 3,
+    "totalScore": 300,
     "history": [
       {
         "gameType": "strands",
@@ -47,7 +49,7 @@
         "date": "Mon Jul 15 2024",
         "puzzleNumber": 134,
         "score": 100,
-        "gameBoard": ["🔵", "🔵", "🔵", "🟡", "🔵", "🔵", "🔵"],
+        "grid": ["🔵", "🔵", "🔵", "🟡", "🔵", "🔵", "🔵"],
         "hintsUsed": 0,
         "indexOfSpangram": 3
       },
@@ -57,7 +59,7 @@
         "date": "Thu Jul 11 2024",
         "puzzleNumber": 130,
         "score": 100,
-        "gameBoard": ["🔵", "🔵", "🔵", "🟡", "🔵", "🔵", "🔵"],
+        "grid": ["🔵", "🔵", "🔵", "🟡", "🔵", "🔵", "🔵"],
         "hintsUsed": 0,
         "indexOfSpangram": 3
       },
@@ -67,7 +69,7 @@
         "date": "Tue Jul 16 2024",
         "puzzleNumber": 135,
         "score": 100,
-        "gameBoard": ["🔵", "🔵", "🔵", "🟡", "🔵", "🔵", "🔵", "🔵"],
+        "grid": ["🔵", "🔵", "🔵", "🟡", "🔵", "🔵", "🔵", "🔵"],
         "hintsUsed": 0,
         "indexOfSpangram": 3
       }
