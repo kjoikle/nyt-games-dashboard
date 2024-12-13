@@ -4,6 +4,8 @@
     "gamesSolved": 2,
     "totalScore": 190,
     "perfectPuzzles": 1,
+    "currentStreak": 0,
+    "bestStreak": 2,
     "history": [
       {
         "gameType": "connections",
@@ -42,6 +44,8 @@
     "totalHints": 0,
     "perfectPuzzles": 3,
     "totalScore": 300,
+    "currentStreak": 0,
+    "bestStreak": 2,
     "history": [
       {
         "gameType": "strands",

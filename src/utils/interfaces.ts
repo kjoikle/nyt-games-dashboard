@@ -30,6 +30,8 @@ export interface connectionsData {
   gamesSolved: number;
   totalScore: number;
   perfectPuzzles: number;
+  currentStreak: number;
+  bestStreak: number;
   history: connectionsGame[];
 }
 
@@ -37,6 +39,8 @@ export interface strandsData {
   gamesPlayed: number;
   totalScore: number;
   totalHints: number;
+  currentStreak: number;
+  bestStreak: number;
   perfectPuzzles: number;
   history: strandsGame[];
 }
