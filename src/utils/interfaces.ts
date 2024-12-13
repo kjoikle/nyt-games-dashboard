@@ -24,3 +24,18 @@ export interface strandsGame {
   hintsUsed: number;
   indexOfSpangram: number; // zero indexed
 }
+
+export interface connectionsData {
+  gamesPlayed: number;
+  gamesSolved: number;
+  totalScore: number;
+  perfectPuzzles: number;
+  history: connectionsGame[];
+}
+
+export interface strandsData {
+  gamesPlayed: number;
+  gamesSolved: number;
+  totalScore: number;
+  history: strandsGame[];
+}
