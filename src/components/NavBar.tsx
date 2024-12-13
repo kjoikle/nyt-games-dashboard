@@ -1,13 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const NavBar = ({
-  onAddGameClick,
-  onLoginClick,
-}: {
-  onAddGameClick: () => void;
-  onLoginClick: () => void;
-}) => {
+const NavBar = ({ onAddGameClick }: { onAddGameClick: () => void }) => {
   const links = [
     { href: "/", text: "NYT Games Dashboard" },
     { href: "/connections", text: "Connections" },
@@ -33,12 +27,6 @@ const NavBar = ({
             onClick={onAddGameClick}
           >
             Add Game
-          </button>
-          <button
-            className="bg-blue-300 py-1 px-4 rounded-lg"
-            onClick={onLoginClick}
-          >
-            Login
           </button>
         </div>
       </div>
