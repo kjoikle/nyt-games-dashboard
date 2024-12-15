@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased bg-stone-300`}>{children}</body>
+      <body className={`antialiased`}>
+        <div className=" bg-stone-300">{children}</div>
+      </body>
     </html>
   );
 }
