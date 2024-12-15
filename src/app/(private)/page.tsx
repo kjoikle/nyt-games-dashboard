@@ -1,7 +1,7 @@
 import { getTokens } from "next-firebase-auth-edge";
 import { cookies } from "next/headers";
-import { notFound, redirect } from "next/navigation";
-import { clientConfig, serverConfig } from "../config";
+import { redirect } from "next/navigation";
+import { clientConfig, serverConfig } from "../../config";
 import HomePage from "./Home";
 
 export default async function Home() {
@@ -16,5 +16,5 @@ export default async function Home() {
     redirect("/login");
   }
 
-  return <HomePage email={tokens?.decodedToken.email} />;
+  return <HomePage />;
 }

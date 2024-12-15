@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import ModalManager from "@/components/Modals/ModalManager";
 
 export const metadata: Metadata = {
   title: "NYT Games Dashboard",
@@ -14,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased bg-stone-300`}>
-        <ModalManager>{children}</ModalManager>
-      </body>
+      <body className={`antialiased bg-stone-300`}>{children}</body>
     </html>
   );
 }
