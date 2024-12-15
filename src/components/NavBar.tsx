@@ -1,18 +1,27 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import { getAuth, signOut } from "firebase/auth";
+import { app } from "../firebase";
+import { useRouter } from "next/navigation";
 
-const NavBar = ({
-  onAddGameClick,
-  onLoginClick,
-}: {
-  onAddGameClick: () => void;
-  onLoginClick: () => void;
-}) => {
+const NavBar = ({ onAddGameClick }: { onAddGameClick: () => void }) => {
   const links = [
     { href: "/", text: "NYT Games Dashboard" },
     { href: "/connections", text: "Connections" },
     { href: "/strands", text: "Strands" },
   ];
+
+  const router = useRouter();
+
+  async function handleLogout() {
+    await signOut(getAuth(app));
+
+    await fetch("/api/logout");
+
+    router.push("/login");
+  }
 
   return (
     <nav>
@@ -35,10 +44,10 @@ const NavBar = ({
             Add Game
           </button>
           <button
-            className="bg-blue-300 py-1 px-4 rounded-lg"
-            onClick={onLoginClick}
+            className="bg-red-300 py-1 px-4 rounded-lg"
+            onClick={handleLogout}
           >
-            Login
+            Logout
           </button>
         </div>
       </div>
