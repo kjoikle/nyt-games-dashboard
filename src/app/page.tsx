@@ -1,31 +1,20 @@
-"use client";
+import { getTokens } from "next-firebase-auth-edge";
+import { cookies } from "next/headers";
+import { notFound, redirect } from "next/navigation";
+import { clientConfig, serverConfig } from "../config";
+import HomePage from "./Home";
 
-import React from "react";
-import gameStats from "@data/gameStats.json";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "@/app/firebase/config";
-import { useRouter } from "next/navigation";
-import { signOut } from "firebase/auth";
+export default async function Home() {
+  const tokens = await getTokens(await cookies(), {
+    apiKey: clientConfig.apiKey,
+    cookieName: serverConfig.cookieName,
+    cookieSignatureKeys: serverConfig.cookieSignatureKeys,
+    serviceAccount: serverConfig.serviceAccount,
+  });
 
-export default function Home() {
-  const connectionsStats = gameStats.connections;
-  const strandsStats = gameStats.strands;
-  const router = useRouter();
-  const [user] = useAuthState(auth);
-
-  console.log(user);
-
-  if (!user) {
-    router.push("/sign-in");
+  if (!tokens) {
+    redirect("/login");
   }
 
-  return (
-    <div className="p-5">
-      <button onClick={() => signOut(auth)}>Log Out</button>
-      <h1>Lifetime Stats:</h1>
-      <p>
-        Games Played: {connectionsStats.gamesPlayed + strandsStats.gamesPlayed}{" "}
-      </p>
-    </div>
-  );
+  return <HomePage email={tokens?.decodedToken.email} />;
 }
